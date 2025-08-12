@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Basic HTML Website</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="A simple HTML website with a clean layout and responsive design."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, responsive design, web development"
+    />
+    <meta name="author" content="Your Name" />
+    <meta property="og:title" content="Basic HTML Website" />
+    <meta
+      property="og:description"
+      content="A simple HTML website with a clean layout and responsive design."
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      body {
+        font-family: cursive;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #f8f9fa;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: larger;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 15px;
+      }
+
+      section#banner {
+        padding: 40px;
+        text-align: center;
+      }
+
+      section#banner h1 {
+        margin: 0;
+        font-size: xx-large;
+      }
+
+      section#banner p {
+        color: #ccc;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+      }
+
+      main > * {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      section#contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      form input,
+      form textarea {
+        border: 2px solid #000;
+        font-size: medium;
+        padding: 10px;
+        border-radius: 4px;
+      }
+
+      form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: larger;
+        background-color: #000;
+        color: #fff;
+      }
+
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 0 0 10px;
+        margin: 0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        font-size: larger;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="banner">
+      <h1>Frontend Developer</h1>
+      <p>html only with proper layout, no styling</p>
+    </section>
+    <main>
+      <section id="contact-form">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </fieldset>
+          <fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </fieldset>
+          <fieldset>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </fieldset>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; all rights reserved 2025</p>
+    </footer>
+  </body>
+</html>

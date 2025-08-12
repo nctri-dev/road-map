@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>Home | Basic HTML Website</title>
+    <meta
+      name="description"
+      content="A simple HTML website with a clean layout and responsive design."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, responsive design, web development"
+    />
+    <meta name="author" content="Your Name" />
+    <meta property="og:title" content="Basic HTML Website" />
+    <meta
+      property="og:description"
+      content="A simple HTML website with a clean layout and responsive design."
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      body {
+        font-family: cursive;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #f8f9fa;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: larger;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 15px;
+      }
+
+      section#banner {
+        padding: 40px;
+        text-align: center;
+      }
+
+      section#banner h1 {
+        margin: 0;
+        font-size: xx-large;
+      }
+
+      section#banner p {
+        color: #ccc;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        width: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+
+      aside ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      aside ul li {
+        padding: 10px 0;
+      }
+
+      aside ul li:not(:last-child) {
+        border-bottom: 2px solid #000;
+      }
+
+      section#work-experience ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      section#work-experience ul li:not(:last-child) {
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      section#education ul {
+        list-style-type: "- ";
+        padding-left: 10px;
+      }
+
+      article {
+        display: flex;
+        gap: 20px;
+      }
+
+      article div {
+        flex: 1;
+        border: 2px solid #000;
+        border-radius: 40px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      article div p {
+        margin: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      article div p span {
+        color: #ccc;
+      }
+
+      section,
+      aside {
+        padding: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        font-size: larger;
+      }
+
+      section#education,
+      aside#projects,
+      section#work-experience {
+        border: 1px solid #000;
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="banner">
+      <h1>Frontend Developer</h1>
+      <p>html only with proper layout, no styling</p>
+    </section>
+    <main>
+      <aside id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>HTML Only Portfolio</li>
+          <li>Calculator</li>
+          <li>Quiz App</li>
+          <li>Countdown Timer</li>
+          <li>Product Upcoming Page</li>
+        </ul>
+      </aside>
+      <section id="work-experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li>
+            <h3>roadmap.sh</h3>
+            <p>Solved all the frontend projects</p>
+            <a href="#">Visit my Profile</a>
+          </li>
+          <li>
+            <h3>OpenSource Work</h3>
+            <p>
+              Contributed to 50 opensource projects. Made my own projects with
+              200 GitHub Stars.
+            </p>
+            <a href="#">Visit my GitHub Profile</a>
+          </li>
+        </ul>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <p>
+          Graduated with 3.76 out of 4 CGPA. Won Acme Hackalthon. Organized 30
+          sessions.
+        </p>
+        <p>Courses I took:</p>
+        <ul>
+          <li>Object Oriented Programming</li>
+          <li>Data Structures and Algorithms</li>
+          <li>Web Engineering</li>
+          <li>Artificial Intelligence</li>
+          <li>Human Computer Interaction</li>
+          <li>Computer Graphics</li>
+          <li>Database Management Systems</li>
+          <li>Distributed Database Systems</li>
+          <li>Discreet Mathematics</li>
+        </ul>
+      </section>
+    </main>
+    <section id="reviews-from-my-teachers">
+      <h2>Reviews from my Teachers</h2>
+      <article>
+        <div>
+          <p>
+            John doe was a brilliant student; always stood out with his
+            assignments.
+          </p>
+          <p>
+            <span>Jane Doe</span>
+            <span>Assistant Professor</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            John doe was a brilliant student; always stood out with his
+            assignments.
+          </p>
+          <p>
+            <span>Jane Doe</span>
+            <span>Assistant Professor</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            John doe was a brilliant student; always stood out with his
+            assignments.
+          </p>
+          <p>
+            <span>Jane Doe</span>
+            <span>Assistant Professor</span>
+          </p>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <p>&copy; all rights reserved 2025</p>
+    </footer>
+  </body>
+</html>
