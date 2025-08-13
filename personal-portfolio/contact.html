@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Basic HTML Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../assets/styles/personal-portfolio.css" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="A simple HTML website with a clean layout and responsive design."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, responsive design, web development"
+    />
+    <meta name="author" content="Your Name" />
+    <meta property="og:title" content="Basic HTML Website" />
+    <meta
+      property="og:description"
+      content="A simple HTML website with a clean layout and responsive design."
+    />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="banner">
+      <h1>Frontend Developer</h1>
+      <p>html only with proper layout, no styling</p>
+    </section>
+    <main>
+      <section id="contact-form">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </fieldset>
+          <fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </fieldset>
+          <fieldset>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </fieldset>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; all rights reserved 2025</p>
+      <button id="theme-toggle">Light/Dark</button>
+    </footer>
+    <script src="../assets/scripts/toggleModeTheme.js"></script>
+  </body>
+</html>
