@@ -1,0 +1,200 @@
+:root {
+  --content-padding-slider: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.container-cards-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.container-cards-2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.container-cards-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card.outline {
+  border: 2px solid #333;
+  border-radius: 20px;
+}
+
+.card.solid {
+  background-color: #333;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.card.solid .user .info p:last-child {
+  color: #666;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.rate {
+  padding: 10px 20px;
+}
+
+.avatar {
+  aspect-ratio: 1 /1;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.avatar.full {
+  flex-shrink: 0;
+}
+
+.avatar.circle {
+  width: 64px;
+  border-radius: 50%;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-name {
+  font-size: 1.2em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: var(--content-padding-slider);
+}
+
+.content.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.content.comment::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #333;
+}
+
+.content p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slider button {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.slider button:hover {
+  background-color: #f0f0f0;
+}
+
+.slide {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  scale: 0.8;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.slide.active {
+  filter: grayscale(0%);
+  opacity: 1;
+  scale: 1;
+}
+
+.text {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+}
+
+.text.hidden {
+  opacity: 0;
+  position: absolute;
+  top: var(--content-padding-slider);
+  left: var(--content-padding-slider);
+  visibility: hidden;
+}
