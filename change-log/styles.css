@@ -1,0 +1,101 @@
+:root {
+  --text-color: #333;
+  --paragraph-color: #666;
+  --link-color: #1a73e8;
+  --dot-bg-color: #333;
+  --space-dot-px: 20px;
+  --btn-bg-color: #333;
+  --btn-text-color: #fff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: var(--text-color);
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--paragraph-color);
+}
+
+main {
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+}
+
+.change-log {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.change-log .cl-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 20px;
+  align-items: center;
+}
+
+.change-log .cl-item .cl-time {
+  text-align: center;
+  color: var(--paragraph-color);
+  position: relative;
+}
+
+.change-log .cl-item .cl-time::after {
+  content: "";
+  width: 2px;
+  height: 80px;
+  background-color: var(--dot-bg-color);
+  position: absolute;
+  right: 0;
+  transform: translate(calc(100% - 1px), calc(-50% + 9px));
+}
+
+.change-log .cl-item .cl-content {
+  margin-left: var(--space-dot-px);
+  font-weight: bold;
+  position: relative;
+}
+
+.change-log .cl-item .cl-content::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: var(--dot-bg-color);
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(calc(-50% - var(--space-dot-px)));
+}
+
+button {
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.visit-change-log {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
