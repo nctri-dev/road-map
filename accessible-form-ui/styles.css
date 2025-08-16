@@ -1,0 +1,156 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: cursive;
+  font-size: 1em;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessible-form-ui {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  border: 2px solid #333;
+  border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+form .field .input-container {
+  box-sizing: border-box;
+  align-content: center;
+  padding: 4px 8px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  height: 40px;
+}
+
+form .field .input-container.password {
+  padding-right: 40px;
+}
+
+form .field input {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+form .field .input-container.invalid {
+  border-color: red;
+}
+
+form .field .error-message {
+  color: red;
+}
+
+form button {
+  color: #fff;
+  background-color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: none;
+  border-style: none;
+}
+
+form button:hover {
+  filter: brightness(1.1);
+}
+
+form button:active {
+  filter: brightness(0.8);
+  outline: none;
+}
+
+form div.password {
+  position: relative;
+  width: 100%;
+}
+
+form div.password .toggle-password {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  padding: 6px;
+  right: 0;
+  top: 0;
+}
+
+form div.password .icon-eye {
+  display: none;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress span {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.progress .task-list {
+  flex-grow: 1;
+  background-color: #eee;
+  padding: 20px;
+  margin: 0;
+  border-radius: 20px;
+}
+
+.progress .task-list li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+.progress .task-list li.done {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    #333333 0%,
+    #333333 65%,
+    #e6e6e6 65%,
+    #e6e6e6 100%
+  );
+}
+
+.progress-circle span {
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  background: #fff;
+  border-radius: 50%;
+}

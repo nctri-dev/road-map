@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="accessible-form-ui">
+        <form id="accessible-form" action="#" novalidate>
+          <div class="field">
+            <label for="full-name">Full Name</label>
+            <div class="input-container">
+              <input
+                id="full-name"
+                type="text"
+                placeholder="What should we call you?"
+                aria-required="true"
+              />
+            </div>
+            <div class="error-message" aria-live="assertive"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <div class="input-container">
+              <input
+                id="email"
+                type="email"
+                placeholder="example@gmail.com"
+                aria-required="true"
+                autocomplete="email"
+              />
+            </div>
+            <div class="error-message" aria-live="assertive"></div>
+          </div>
+          <div class="field">
+            <label for="password">Enter Password</label>
+            <div class="input-container password">
+              <input
+                id="password"
+                type="password"
+                placeholder="xxxxxxxx"
+                aria-required="true"
+              />
+              <span class="toggle-password">
+                <img src="eye-off.svg" class="icon-eye-off" />
+                <img src="eye.svg" class="icon-eye" />
+              </span>
+            </div>
+            <div class="error-message" aria-live="assertive"></div>
+          </div>
+          <div class="field">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="input-container password">
+              <input
+                id="confirm-password"
+                type="password"
+                placeholder="xxxxxxxx"
+                aria-required="true"
+              />
+              <span class="toggle-password">
+                <img src="eye-off.svg" class="icon-eye-off" />
+                <img src="eye.svg" class="icon-eye" />
+              </span>
+            </div>
+            <div class="error-message" aria-live="assertive"></div>
+          </div>
+          <button type="submit">Update Profile</button>
+        </form>
+
+        <section class="progress">
+          <div class="progress-circle">
+            <span class="progress-text">65%</span>
+          </div>
+          <span>Profile Completeness</span>
+          <ul class="task-list">
+            <li class="done">Create Account</li>
+            <li class="done">Update Roadmap Progress</li>
+            <li class="done">Setup Public Profile</li>
+            <li>Complete your first project</li>
+            <li>Invite your Friends</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
