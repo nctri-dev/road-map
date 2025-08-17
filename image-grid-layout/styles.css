@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  align-content: center;
+}
+
+main {
+  margin: auto;
+  display: grid;
+  width: 800px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-flow: row dense;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img.tall-image {
+  grid-row: span 2;
+}
