@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/js-datepicker/dist/datepicker.min.css"
+    />
+    <script src="https://unpkg.com/js-datepicker" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/luxon@3.7.1/build/global/luxon.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form class="age-calculator">
+        <h1>Age Calculator</h1>
+        <div class="datepicker">
+          <label for="datepicker">Enter your birth date:</label>
+          <div class="datepicker-input">
+            <input
+              type="text"
+              id="datepicker"
+              placeholder="dd/mm/yyyy"
+              autocomplete="off"
+            />
+            <label
+              for="datepicker"
+              id="toggle-calendar"
+              aria-label="Toggle Calendar"
+              tabindex="0"
+            >
+              <div class="calendar-icon"></div>
+            </label>
+          </div>
+          <button type="submit">Calculate</button>
+        </div>
+        <p id="error" hidden></p>
+        <p id="result" hidden>Your are <strong id="age"></strong> old</p>
+      </form>
+    </main>
+  </body>
+</html>

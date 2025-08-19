@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: cursive;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 100%;
+  width: 400px;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.age-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.age-calculator h1 {
+  text-align: center;
+}
+
+.age-calculator div.datepicker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.datepicker-ui {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.datepicker-input {
+  position: relative;
+  min-width: 200px;
+}
+
+.datepicker-input input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.datepicker-input input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+label#toggle-calendar {
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+label#toggle-calendar:active {
+  opacity: 0.9;
+}
+.datepicker-input .calendar-icon {
+  background-image: url("calendar.svg");
+  width: 100%;
+  height: 100%;
+}
+
+.datepicker-input .calendar-icon:hover {
+  filter: brightness(1.1);
+}
+
+.age-calculator button {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.age-calculator #result {
+  text-align: center;
+}
+
+.age-calculator #error {
+  color: #ff0000;
+  text-align: center;
+}
