@@ -1,0 +1,128 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main {
+  min-width: 480px;
+}
+
+.flash-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 480px;
+}
+
+.flash-cards .progress-bar {
+  width: 100%;
+  border: 2px solid;
+  height: 40px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  position: relative;
+  font-weight: bold;
+}
+
+.flash-cards .progress-bar .bar {
+  background-color: #ccc;
+  height: 100%;
+  border-radius: 4px;
+  align-content: center;
+  display: flex;
+  justify-items: center;
+}
+
+.flash-cards .progress-bar .completion-status {
+  margin: auto;
+}
+
+.flash-cards .progress-bar .question-progress {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flash-cards .cards {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 4px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.flash-cards .cards .card {
+  flex-grow: 1;
+  background-color: #eee;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flash-cards .cards .card .card-front,
+.flash-cards .cards .card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: scaleInOut 0.3s ease-in-out;
+}
+
+.flash-cards .cards .card .card-back {
+  transform: rotateY(180deg);
+}
+
+.flash-cards .cards.isFlipped .card {
+  transform: rotateY(180deg);
+}
+
+.flash-cards .cards .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.flash-cards .cards .pagination button#toggle-answer {
+  font-weight: bold;
+}
+
+.flash-cards .cards .pagination button#previous::before {
+  content: "\276E\ "; /* \276E = < */
+}
+
+.flash-cards .cards .pagination button#next::after {
+  content: " \276F"; /* \276E = > */
+}
+
+@keyframes scaleInOut {
+  from {
+    scale: 0.8;
+  }
+  to {
+    scale: 1;
+  }
+}
