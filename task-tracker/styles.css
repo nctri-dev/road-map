@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  background-color: #fff;
+  outline: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  margin: auto;
+  max-width: 480px;
+  height: 480px;
+  align-content: center;
+}
+
+.task-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-tracker label {
+  font-size: 1.4em;
+}
+
+.task-tracker .form-container {
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+
+.task-tracker .form-container input {
+  border: transparent;
+  padding: 0px 10px;
+  flex-grow: 1;
+  font-size: 1em;
+}
+
+.task-tracker .form-container button {
+  background-image: url(images/enter.svg);
+  background-size: cover;
+  background-position: center;
+  border: transparent;
+  height: 36px;
+  width: 40px;
+  margin: 2px;
+  background-color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-tracker ul.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-tracker ul.task-list li.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 5px;
+}
+
+.task-tracker ul.task-list li.task-item input[type="checkbox"].task-checkbox {
+  transform: scale(1.5);
+  filter: grayscale(1);
+  flex-shrink: 0;
+}
+
+.task-tracker ul.task-list li.task-item p {
+  margin-left: 10px;
+  flex-grow: 1;
+  user-select: none;
+}
+
+.task-tracker ul.task-list li.task-item button.trash-icon {
+  background-image: url(images/trash.svg);
+  width: 24px;
+  height: 24px;
+  border: transparent;
+  cursor: pointer;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.task-tracker
+  ul.task-list
+  li.task-item
+  input[type="checkbox"]:checked.task-checkbox
+  + p {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
