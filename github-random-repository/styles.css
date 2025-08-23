@@ -41,6 +41,7 @@ main {
   text-align: start;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .github-repository .dropdown button.dropdown-btn::after {
   content: "v";
