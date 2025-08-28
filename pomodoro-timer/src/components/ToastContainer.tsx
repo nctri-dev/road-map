@@ -15,6 +15,7 @@ const ToastContainer = () => {
     <div className="fixed flex flex-col gap-1 bottom-10 right-1/2 translate-x-1/2">
       {toasts.map((toast) => (
         <Toast
+          key={toast.id}
           message={toast.message}
           type={toast.type}
           onClose={() => removeToast(toast.id)}
