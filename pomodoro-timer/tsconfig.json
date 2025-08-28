@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "isolatedModules": false
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
